@@ -1,2 +1,2 @@
-# haxeoball
-Un 8ball escrito en Haxe compilado a python y a javascript 
+Este repositorio forma parte de mis 100 días de código<br>
+Podés seguirlo en este gist: https://gist.github.com/EnzoDiazDev/8eb65d09c6e9f3cd913ad0231bdfe029
