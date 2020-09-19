@@ -1,7 +1,7 @@
 package src;
 
 class Oball {
-    private final responses:Array<String> = [
+    static private final responses:Array<String> = [
         "Y... Yo creo que sí.",
         "Es cierto.",
         "Sin lugar a dudas xd",
@@ -23,10 +23,7 @@ class Oball {
         "Búscate la respuesta tú mismo."
     ];
 
-    public function new() {
-    }
-
-    public function ask(question:String):String {
+    static public function ask(question:String):String {
         return responses[Math.floor(Math.random() * responses.length)];
     }
 }

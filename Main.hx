@@ -6,7 +6,7 @@ class Main {
         trace("Realiza una pregunta:");
         final question = Sys.stdin().readLine(); 
 
-        final response = new Oball().ask(question);
+        final response = Oball.ask(question);
 
         trace('─ ${response}');
     }

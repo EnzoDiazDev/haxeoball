@@ -36,7 +36,7 @@ Main.__name__ = true;
 Main.main = function() {
 	console.log("Main.hx:6:","Realiza una pregunta:");
 	var question = new _$Sys_FileInput(0).readLine();
-	var response = new src_Oball().ask(question);
+	var response = src_Oball.ask(question);
 	console.log("Main.hx:11:","─ " + response);
 };
 Math.__name__ = true;
@@ -433,14 +433,10 @@ js_node_url_URLSearchParamsEntry.get_name = function(this1) {
 js_node_url_URLSearchParamsEntry.get_value = function(this1) {
 	return this1[1];
 };
-var src_Oball = function() {
-	this.responses = ["Y... Yo creo que sí.","Es cierto.","Sin lugar a dudas xd","Sí.","Dalo por hecho.","Si te lo digo no me vas a creer.","Si te digo lo que pasará, no ocurrirá.","Según mis cálculos... Los cálculos no dicen nada.","Ni lo confirmo ni lo desmiento.","Es complicado...","No.","No lo creo.","Mi IA dice que no es así.","No cuentes con ello.","Claro que no.","Búscate la respuesta tú mismo."];
-};
+var src_Oball = function() { };
 src_Oball.__name__ = true;
-src_Oball.prototype = {
-	ask: function(question) {
-		return this.responses[Math.floor(Math.random() * this.responses.length)];
-	}
+src_Oball.ask = function(question) {
+	return src_Oball.responses[Math.floor(Math.random() * src_Oball.responses.length)];
 };
 if(typeof(performance) != "undefined" ? typeof(performance.now) == "function" : false) {
 	HxOverrides.now = performance.now.bind(performance);
@@ -449,5 +445,6 @@ if( String.fromCodePoint == null ) String.fromCodePoint = function(c) { return c
 String.__name__ = true;
 Array.__name__ = true;
 js_Boot.__toStr = ({ }).toString;
+src_Oball.responses = ["Y... Yo creo que sí.","Es cierto.","Sin lugar a dudas xd","Sí.","Dalo por hecho.","Si te lo digo no me vas a creer.","Si te digo lo que pasará, no ocurrirá.","Según mis cálculos... Los cálculos no dicen nada.","Ni lo confirmo ni lo desmiento.","Es complicado...","No.","No lo creo.","Mi IA dice que no es así.","No cuentes con ello.","Claro que no.","Búscate la respuesta tú mismo."];
 Main.main();
 })({});
